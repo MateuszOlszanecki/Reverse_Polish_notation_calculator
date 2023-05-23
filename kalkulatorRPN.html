@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator RPN</title>
+    <link rel="stylesheet" type="text/css" href="kalkulatorRPN.css">
+    <script src="kalkulatorRPN.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+
+<body>
+    <h1>
+        Kalkulator
+    </h1>
+
+    <p>
+        Odwrotna Notacja Polska
+    </p>
+
+    <div id="stack">
+        <div id="stack1"></div>
+        <div id="stack2"></div>
+        <div id="stack3"></div>
+    </div>
+
+    <table class="portraitKeyboard">
+        <tr><td colspan="4" onclick="clearC()">C<td colspan="2" onclick="clearCC()">CC
+        <tr><td onclick="getNumber(7)">7<td onclick="getNumber(8)">8<td onclick="getNumber(9)">9<td onclick="divideXY()">/<td onclick="gcdXY()">gcd<td onclick="lcmXY()">lcm
+        <tr><td onclick="getNumber(4)">4<td onclick="getNumber(5)">5<td onclick="getNumber(6)">6<td onclick="multiplyXY()">*<td onclick="primeFactorization()">frac<td onclick="checkPrime()">prime
+        <tr><td onclick="getNumber(1)">1<td onclick="getNumber(2)">2<td onclick="getNumber(3)">3<td onclick="substractXY()">-<td onclick="xModY()">mod<td onclick="xPowerY()">x<sup>y</sup>
+        <tr><td onclick="getNumber(0)">0<td colspan="2" onclick="addToStack()">enter<td onclick="addXY()">+<td onclick="twoPrimesSum()">p+q<td onclick="switchXY()">x&#8644;y
+    </table>
+
+    <table class="landscapeKeyboard">
+        <tr><td onclick="getNumber(1)">1<td onclick="getNumber(2)">2<td onclick="getNumber(3)">3<td onclick="getNumber(4)">4<td onclick="getNumber(5)">5<td onclick="getNumber(6)">6<td onclick="getNumber(7)">7<td onclick="getNumber(8)">8<td onclick="getNumber(9)">9
+        <tr><td onclick="getNumber(0)">0<td colspan="2" onclick="addToStack()">enter<td onclick="divideXY()">/<td onclick="multiplyXY()">*<td onclick="substractXY()">-<td onclick="addXY()">+<td onclick="clearC()">C<td onclick="clearCC()">CC
+        <tr><td onclick="gcdXY()">gcd<td onclick="lcmXY()">lcm<td onclick="primeFactorization()">frac<td colspan="2" onclick="checkPrime()">prime<td onclick="xModY()">mod<td onclick="xPowerY()">x<sup>y</sup><td onclick="twoPrimesSum()">p+q<td onclick="switchXY()">x&#8644;y
+    </table>
+</body>
+
+</html>
